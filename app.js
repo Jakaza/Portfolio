@@ -1,22 +1,61 @@
-const navbar = document.querySelector("#nav");
-const navBtn = document.querySelector("#nav-btn");
+const openBtn = document.querySelector("#open-btn");
 const closeBtn = document.querySelector("#close-btn");
-const sidebar = document.querySelector("#sidebar");
-const date = document.querySelector("#date");
-// add fixed class to navbar
-window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 80) {
-    navbar.classList.add("navbar-fixed");
-  } else {
-    navbar.classList.remove("navbar-fixed");
+const sideMenu = document.querySelector("#sidebar");
+
+
+
+(function(){
+  if(window.innerWidth <= 883){
+    document.querySelector('.user-details').classList.toggle('user-details-svg')
   }
-});
-// show sidebar
-navBtn.addEventListener("click", function () {
-  sidebar.classList.add("show-sidebar");
-});
-closeBtn.addEventListener("click", function () {
-  sidebar.classList.remove("show-sidebar");
-});
-// set year
-date.innerHTML = new Date().getFullYear();
+}())
+
+openBtn.addEventListener('click', function(){
+  openBtn.classList.toggle('first-spin')
+  sideMenu.classList.toggle('show-sidebar')
+  
+  setTimeout(function(){
+    openBtn.classList.toggle('hide-btn')
+    closeBtn.classList.toggle('hide-btn')
+    openBtn.classList.toggle('first-spin')
+  }, 300)
+})
+
+
+closeBtn.addEventListener('click', function(){
+  closeBtn.classList.toggle('first-spin')
+  sideMenu.classList.toggle('show-sidebar')
+  
+  setTimeout(function(){
+    closeBtn.classList.toggle('hide-btn')
+    openBtn.classList.toggle('hide-btn')
+    closeBtn.classList.toggle('first-spin')
+  }, 300)
+
+})
+
+
+
+
+
+
+
+
+
+
+// window.addEventListener("scroll", function () {
+//   if (window.pageYOffset > 80) {
+//     navbar.classList.add("navbar-fixed");
+//   } else {
+//     navbar.classList.remove("navbar-fixed");
+//   }
+// });
+
+// navBtn.addEventListener("click", function () {
+//   sidebar.classList.add("show-sidebar");
+// });
+// closeBtn.addEventListener("click", function () {
+//   sidebar.classList.remove("show-sidebar");
+// });
+
+// date.innerHTML = new Date().getFullYear();

@@ -1,0 +1,162 @@
+
+:root{
+    --transition: all 0.3s linear;
+    --spacing: 0.15rem;
+    --clr-grey-1: hsl(209, 61%, 16%);
+
+
+    --bg-blue-1:#5e83e8;
+    --bg-black-1: #020c1b;
+    --bg-black-2: rgb(35, 35, 35);
+    --box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+    --backround: #fff;
+
+    --text-lblue:#ccd6f6;
+    --text-grey: #495670;
+
+}
+
+
+.about-me{
+    width: 100%;
+    height: auto;
+    background-color: var(--backround);
+}
+
+.inner-about-me{
+    width: 90%;
+    margin: 0 auto;
+    height: inherit;
+    /* background-color: red; */
+}
+
+.inner-about-me article{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* background-color: #495670; */
+}
+
+.cartoon-container{
+    position: relative;
+    width: 50%;
+    height: inherit;
+    background-color: white;
+    /* background-color: red; */
+}
+
+.dot-dot-container{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    background-image: -webkit-linear-gradient(71deg,transparent 0%,transparent 50%, var(--backround) 50%, var(--backround) 100%),
+    -webkit-linear-gradient(  0deg, var(--bg-blue-1) 0%, var(--bg-blue-1) 50%, var(--backround) 50%, var(--backround) 100%);
+    background-size:1em 1em;
+    z-index: 99;
+}
+
+.image-cartoom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 240px);
+    height: inherit;
+    margin-left: auto;
+    padding-left: 25px;
+}
+
+.about-me-details{
+    padding-top: 25px;
+    width: 40%;
+    height: inherit;
+}
+
+.jakaza{
+    color: var(--bg-blue-1);
+}
+
+.about-me-details h3{
+    position: relative;
+    color: var(--bg-blue-1);
+}
+
+.about-me-details p{
+    color: var(--bg-black-1);
+}
+
+.about-me-details p span{
+    font-weight: 700;
+}
+
+.about-me-details h3::after{
+    content: '';
+    height: 2px;
+    width: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background-color: var(--bg-blue-1);
+}
+
+
+/* .box{
+    width: 240px;
+    height: 240px;
+    background-image: -webkit-linear-gradient(71deg,transparent 0%,transparent 50%, var(--backround) 50%, var(--backround) 100%),
+    -webkit-linear-gradient(  0deg, var(--bg-blue-1) 0%, var(--bg-blue-1) 50%, var(--backround) 50%, var(--backround) 100%);
+    background-size:1em 1em;
+} */
+
+
+/*==================================================================*/
+
+/*-------------------------------- TABLATE ----------------------*/
+
+
+@media only screen and (max-width: 883px) {
+    .inner-about-me article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartoon-container{
+        position: relative;
+        width: 100%;
+    }
+    .about-me-details{
+        padding-top: 15px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 781px) {
+    .cartoon-container{
+        position: relative;
+        width: 100%;
+        height: 150px;
+        /* background-color: red; */
+    }
+    .image-cartoom{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 99;
+    }
+    .image-cartoom img{
+        width: 50% !important;
+    }
+    .dot-dot-container{
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        z-index: 1;
+    }
+}

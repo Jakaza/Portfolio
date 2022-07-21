@@ -28,9 +28,8 @@ main{
     width: 100%;
     height: calc(100vh - 5rem);
     background-color: var(--bg-black-2);
-    background: -webkit-linear-gradient(left, #DB2B39 50%,#2B303A 50%);
-    background: linear-gradient(to right, #DB2B39 50%,#2B303A 50%);
-    background: -moz-linear-gradient(left, #DB2B39 50%, #2B303A 50%);
+    background: -webkit-linear-gradient(120deg, var(--bg-black-2) 0%, var(--bg-black-2) 62%, var(--bg-blue-1) 62%);
+    background: -moz-linear-gradient(120deg, var(--bg-black-2) 0%, var(--bg-black-2) 62%, var(--bg-blue-1) 62%);
     background: linear-gradient(120deg, var(--bg-black-2) 0%, var(--bg-black-2) 62%, var(--bg-blue-1) 62%);
 }
 
@@ -40,6 +39,16 @@ main{
     width: 90%;
     margin: 0 auto;
     height: inherit;
+}
+
+.user-details-svg{
+    background-color: red;
+    background: url('../images/backgroundsvg.svg');
+    background-repeat: no-repeat;
+    /* background-position: left; */
+    background-size: contain;
+    background-size: 25%;
+    background-position: right;
 }
 
 .user-details , .user-picture{
@@ -64,7 +73,7 @@ main{
     max-width: 250px;
     height: 310px;
     padding: 5px;
-    background-color: var(--bg-black-2);
+    background-color: var(--bg-blue-1);
     border-radius: 0.5rem;
     /* overflow: hidden; */
 }
@@ -145,7 +154,7 @@ main{
         font-size: 25px;
         padding: 5px 10px 0 0;
         color: var(--bg-blue-1);
-        translate: var(--transition);
+        transition: all 0.3s linear;
 }
 
 .fa-brands:hover{
@@ -171,5 +180,105 @@ main{
 
 .postion-bottom{
     position: fixed;
-    bottom: 5px;
+    bottom: 15px;
 }
+
+
+
+/*==================================================================*/
+
+/*-------------------------------- TABLATE ----------------------*/
+
+
+@media only screen and (max-width: 883px) {
+    .user-details-svg{
+        background-color: var(--bg-black-2);
+    }
+}
+
+
+@media only screen and (max-width: 781px) {
+    .hero-image{
+        max-width: 200px;
+        height: 250px;
+        padding: 1px;
+    }
+    .hero-image::before , .hero-image img::before {
+        border: 0.25rem solid var(--bg-black-2);
+        top: .85rem;
+        right: -.85rem;
+    }
+
+    
+
+    .postion-bottom{
+        bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+
+    main{
+        background: linear-gradient(130deg, var(--bg-black-2) 0%, var(--bg-black-2) 80%, var(--bg-blue-1) 80%);
+    }
+    .inner-main{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .user-picture{
+        width: 100%;
+        justify-content: flex-start;
+        -webkit-order: 1;
+        order: 1;
+        height: fit-content;
+        padding: 50px 0 15px 0;
+    }
+
+    .user-details {
+        width: 100%;
+        -webkit-order: 2;
+        order: 2;
+        align-items: flex-start;
+        padding: 50px 0 0 0;
+    }
+
+    .hero-image{
+        width: 250px;
+        height: 230px;
+        padding: 5px;
+        border-radius: 0.5rem;
+        background-color: var(--bg-black-2);
+    }
+
+    .hero-image::before , .hero-image img::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0.25rem solid var(--bg-blue-1);
+        top: .5rem;
+        right: -.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .blue-box{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .hero-image{
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-image::before , .hero-image img::before {
+        border: 0.15rem solid var(--bg-blue-1);
+    }
+
+}
+
+
+
+/*-------------------------------- SMARTPHONE ----------------------*/

@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="theme/navbar.css">
     <link rel="stylesheet" href="theme/main.css">
+    <link rel="stylesheet" href="theme/about-me.css">
 </head>
 <body>
 
@@ -17,29 +18,53 @@
         <div class="inner-header">
             <nav>
                 <div class="logo">
-                    <img src="/images/coding.png" width="100%" height="100%" alt="" srcset="">
+                    <img src="/images/logo.png" width="100%" height="100%" alt="" srcset="">
                 </div>
-                <ul>
+                <ul class="links">
                     <li><a href="">Home</a></li>
                     <li><a href="">About Me</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
+                <div class="nav-bar">
+                    <span>
+                        <i id="open-btn" class="fa-solid fa-bars"></i>
+                        <i id="close-btn" class="fa-solid hide-btn fa-grip-lines"></i>
+                    </span>
+                </div>
             </nav>
 
         </div>
+
+        <div class="side-menu" id="sidebar">
+            <nav>
+                <ul class="side-links">
+                    <li><a href="">My Work</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <div class="social-media social-media-side-menu">
+                    <ul style="display: flex;">
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
     </header>
-
-
 
     <main>
         <div class="inner-main">
-            <section class="user-details">
+            <section class="user-details user-details-svg">
                 <article class="hero-infor">
                     <div class="underline"></div>
                     <h1>Hello, I'm Themba</h1>
                     <h4>Full Stack Developer</h4>
-                    <p> I like working on both the front-end and back-end of the web. This is my site.</p>
+                    <p> I like working on both the front-end and back-end of the web development. This is my site.</p>
                     <a href="contact.html" class="btn hero-btn">hire me</a>
 
                     <div class="social-media mt-4">
@@ -63,6 +88,36 @@
             </section>
         </div>
     </main>
+
+
+    <section class="about-me pt-4">
+        <div class="inner-about-me">
+            <div class="title text-center">
+                <h1>About Me</h1>
+            </div>
+
+
+            <article>
+                <div class="cartoon-container">    
+                <div class="dot-dot-container">     
+                </div>
+                <div class="image-cartoom">
+                    <img src="/images/svg/manstanding.svg" width="100%" height="100%" alt="" srcset="">
+                </div>
+                </div>
+
+                <div class="about-me-details">
+                    <h3>Who i am</h3>
+                    <p>I’m Themba G Chauke, wellknown as <b class="jakaza">Jakaza.</b>I'm a student at Tshwane University of Technology with front-end and back-end development skills.I am passionate about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences.</p>
+                    <p>I use <b class="jakaza">HTML</b> , <b class="jakaza">JavaScript</b> , <b class="jakaza">Node JS</b>, and frameworks like <b class="jakaza">React JS </b> to create websites.</p>
+                    <p>When it comes to business, first impressions matter, and good website design is the key to capitalizing on them. An excellent site is not judged solely on its looks, but on its functionality and usability as well. My experience as a programmer allows me to come up with intelligent solutions to technical challenges, while at the same time designing sleek and visually appealing websites. Aside from having extensive knowledge of recognized technical standards, I am conversant with modern building practices.</p>
+                    <p><span  style="color: rgb(255, 174, 0);">System</span>.<span style="color: rgb(0, 17, 255);">out</span>.<span style="color: rgb(255, 0, 242);">print</span>(<span style="color: rgb(25, 167, 20);">"hello world"</span>);</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
 
 
 
