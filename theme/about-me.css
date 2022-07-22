@@ -102,6 +102,16 @@
 }
 
 
+.about-me-details .small-box{
+    text-align: center;
+    width: 90%;
+    /* margin: 0 auto; */
+    max-width: 250px;
+    padding: 15px 0;
+    background-color: var(--bg-blue-1);
+    border-radius: 5px;
+}
+
 /* .box{
     width: 240px;
     height: 240px;
@@ -130,6 +140,10 @@
         padding-top: 15px;
         width: 100%;
     }
+
+    .about-me-details .small-box{
+        margin: 0 auto;
+    }
 }
 
 
@@ -148,14 +162,14 @@
         z-index: 99;
     }
     .image-cartoom img{
-        width: 50% !important;
+        width: 85% !important;
     }
     .dot-dot-container{
         top: -10px;
         left: 50%;
         transform: translateX(-50%);
-        width: 140px;
-        height: 140px;
+        width: 80px;
+        height: 80px;
         position: absolute;
         z-index: 1;
     }
