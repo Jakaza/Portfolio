@@ -1,9 +1,17 @@
 
 
 :root{
-    --text-lblue:#ccd6f6;
-    --bg-blue-1:#5e83e8;
-    --text-grey: #495670;
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
     --clr-white: #fff;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
@@ -37,7 +45,7 @@
 }
 
 .service {
-    background: var(--bg-blue-1);
+    background: var(--clr-white);
     padding: 3rem 1.5rem;
     margin-bottom: 2rem;
     border-radius: var(--radius);
@@ -45,12 +53,10 @@
     -webkit-transition: var(--transition);
     transition: var(--transition);
     cursor: pointer;
-    color: white;
   }
   .service-icon {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--text-lblue);
   }
   .underline {
     width: 3rem;
