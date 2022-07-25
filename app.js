@@ -1,14 +1,13 @@
-const openBtn = document.querySelector("#open-btn");
-const closeBtn = document.querySelector("#close-btn");
-const sideMenu = document.querySelector("#sidebar");
+const openBtn = document.querySelector("#open-btn")
+const closeBtn = document.querySelector("#close-btn")
+const sideMenu = document.querySelector("#sidebar")
+const closeLinks = document.querySelectorAll('.close')
 
 
-
-(function(){
   if(window.innerWidth <= 883){
     document.querySelector('.user-details').classList.toggle('user-details-svg')
   }
-}())
+
 
 openBtn.addEventListener('click', function(){
   openBtn.classList.toggle('first-spin')
@@ -23,6 +22,16 @@ openBtn.addEventListener('click', function(){
 
 
 closeBtn.addEventListener('click', function(){
+  closeSideMenu()
+})
+
+closeLinks.forEach(button => {
+    button.addEventListener('click', ()=>{
+      closeSideMenu()
+    })
+});
+
+function closeSideMenu(){
   closeBtn.classList.toggle('first-spin')
   sideMenu.classList.toggle('show-sidebar')
   
@@ -31,8 +40,7 @@ closeBtn.addEventListener('click', function(){
     openBtn.classList.toggle('hide-btn')
     closeBtn.classList.toggle('first-spin')
   }, 300)
-
-})
+}
 
 
 const buttonScroll = document.querySelector('.button-scroll');
