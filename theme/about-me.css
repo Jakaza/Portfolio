@@ -44,7 +44,7 @@
     /* background-color: red; */
 }
 
-/* .dot-dot-container{
+.dot-dot-container{
     top: 50%;
     transform: translateY(-50%);
     width: 240px;
@@ -54,7 +54,7 @@
     -webkit-linear-gradient(  0deg, var(--bg-blue-1) 0%, var(--bg-blue-1) 50%, var(--bg-black-2) 50%, var(--bg-black-2) 100%);
     background-size:1em 1em;
     z-index: 99;
-} */
+}
 
 .image-cartoom{
     display: flex;
@@ -135,6 +135,7 @@
     }
 
     .cartoon-container{
+        display: none;
         position: relative;
         width: 100%;
     }
