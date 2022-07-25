@@ -6,6 +6,11 @@ ul,li{
 li{
     margin-left: 0 !important;
 }
+
+body{
+    background-color:  rgb(35, 35, 35);
+}
+
 :root{
     --transition: all 0.3s linear;
     --spacing: 0.15rem;
@@ -282,3 +287,41 @@ main{
 
 
 /*-------------------------------- SMARTPHONE ----------------------*/
+
+
+
+.button-scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-image: linear-gradient(#42A1EC, #0070C9);
+    border: 1px solid #0077CC;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+
+.button-scroll:hover {
+    background-image: linear-gradient(#51A9EE, #147BCD);
+}
+
+.fa-arrow-up {
+    font-size: 22px;
+    color: #ffc300;
+}
+
+.button-scroll:hover .fa-arrow-up {
+    color: #ffa600;
+}
+
+.hide-button-scroll {
+    display: none;
+}

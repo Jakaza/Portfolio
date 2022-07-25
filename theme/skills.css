@@ -22,6 +22,7 @@
 .skill-container{
     width: 100%;
     height: 750px;
+    background-color: var(--bg-black-2);
 }
 
 .inner-skill-container{ 
@@ -115,8 +116,8 @@
 .level-bar-container {
     width: 100%;
     height: 15px;
-    /* background-color: rgba(255, 166, 0, 0.157); */
-    /* background-image: linear-gradient(90deg ,rgba(26, 132, 218, 0.041),rgba(2, 225, 255, 0.061)); */
+    background-color: rgba(255, 166, 0, 0.233);
+    /* background-image: linear-gradient(90deg ,rgba(26, 132, 218, 0.041),rgba(2, 225, 255, 0.397)); */
 }
 
 .level-bar {

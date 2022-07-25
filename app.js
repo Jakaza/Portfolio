@@ -35,6 +35,27 @@ closeBtn.addEventListener('click', function(){
 })
 
 
+const buttonScroll = document.querySelector('.button-scroll');
+
+buttonScroll.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+
+window.onscroll = () => {
+    toggleTopButton();
+}
+
+function toggleTopButton() {
+    if (document.body.scrollTop > 750 ||
+        document.documentElement.scrollTop > 750) {
+        buttonScroll.classList.remove("hide-button-scroll")
+    } else {
+        buttonScroll.classList.add("hide-button-scroll")
+    }
+}
+
+
+
 
 
 
