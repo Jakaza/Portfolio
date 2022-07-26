@@ -25,7 +25,6 @@ body{
     --text-lblue:#ccd6f6;
     --text-grey: #495670;
     --text-white: #f8f8f8;
-
 }
 
 
@@ -44,6 +43,7 @@ main{
     width: 90%;
     margin: 0 auto;
     height: inherit;
+    padding-top: 5rem;
 }
 
 .user-details-svg{

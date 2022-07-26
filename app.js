@@ -9,6 +9,34 @@ const closeLinks = document.querySelectorAll('.close')
   }
 
 
+
+
+  function progressBar(){
+
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+    console.log( winScroll );
+    console.log( winScroll2 );
+
+
+    alert()
+
+
+  }
+  
+  window.addEventListener('scroll', function(){
+    let scroll = document.body.scrollTop || document.documentElement.scrollTop
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+    let scrollPosition = (scroll / height) * 100;
+
+    document.querySelector('.progress-bar').style.width = `${scrollPosition}%`;
+
+  })
+
+
+
+
 openBtn.addEventListener('click', function(){
   openBtn.classList.toggle('first-spin')
   sideMenu.classList.toggle('show-sidebar')
