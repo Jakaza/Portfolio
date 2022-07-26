@@ -30,7 +30,7 @@ body{
 
 main{
     width: 100%;
-    height: calc(100vh - 5rem);
+    height: 100vh;
     background-color: var(--bg-black-2);
     background: -webkit-linear-gradient(120deg, var(--bg-black-2) 0%, var(--bg-black-2) 62%, var(--bg-blue-1) 62%);
     background: -moz-linear-gradient(120deg, var(--bg-black-2) 0%, var(--bg-black-2) 62%, var(--bg-blue-1) 62%);
