@@ -4,44 +4,37 @@ const sideMenu = document.querySelector("#sidebar")
 const closeLinks = document.querySelectorAll('.close')
 
 
-  if(window.innerWidth <= 883){
-    document.querySelector('.user-details').classList.toggle('user-details-svg')
-  }
+if (window.innerWidth <= 883) {
+  document.querySelector('.user-details').classList.toggle('user-details-svg')
+}
+
+function progressBar() {
+
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+  console.log(winScroll);
+  console.log(winScroll2);
+  alert()
+}
+
+window.addEventListener('scroll', function () {
+  let scroll = document.body.scrollTop || document.documentElement.scrollTop
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+  let scrollPosition = (scroll / height) * 100;
+
+  document.querySelector('.progress-bar').style.width = `${scrollPosition}%`;
+
+})
 
 
 
 
-  function progressBar(){
-
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-
-    console.log( winScroll );
-    console.log( winScroll2 );
-
-
-    alert()
-
-
-  }
-  
-  window.addEventListener('scroll', function(){
-    let scroll = document.body.scrollTop || document.documentElement.scrollTop
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-
-    let scrollPosition = (scroll / height) * 100;
-
-    document.querySelector('.progress-bar').style.width = `${scrollPosition}%`;
-
-  })
-
-
-
-
-openBtn.addEventListener('click', function(){
+openBtn.addEventListener('click', function () {
   openBtn.classList.toggle('first-spin')
   sideMenu.classList.toggle('show-sidebar')
-  
-  setTimeout(function(){
+
+  setTimeout(function () {
     openBtn.classList.toggle('hide-btn')
     closeBtn.classList.toggle('hide-btn')
     openBtn.classList.toggle('first-spin')
@@ -49,21 +42,21 @@ openBtn.addEventListener('click', function(){
 })
 
 
-closeBtn.addEventListener('click', function(){
+closeBtn.addEventListener('click', function () {
   closeSideMenu()
 })
 
 closeLinks.forEach(button => {
-    button.addEventListener('click', ()=>{
-      closeSideMenu()
-    })
+  button.addEventListener('click', () => {
+    closeSideMenu()
+  })
 });
 
-function closeSideMenu(){
+function closeSideMenu() {
   closeBtn.classList.toggle('first-spin')
   sideMenu.classList.toggle('show-sidebar')
-  
-  setTimeout(function(){
+
+  setTimeout(function () {
     closeBtn.classList.toggle('hide-btn')
     openBtn.classList.toggle('hide-btn')
     closeBtn.classList.toggle('first-spin')
@@ -74,26 +67,46 @@ function closeSideMenu(){
 const buttonScroll = document.querySelector('.button-scroll');
 
 buttonScroll.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 
 window.onscroll = () => {
-    toggleTopButton();
+  toggleTopButton();
 }
 
 function toggleTopButton() {
-    if (document.body.scrollTop > 750 ||
-        document.documentElement.scrollTop > 750) {
-        buttonScroll.classList.remove("hide-button-scroll")
-    } else {
-        buttonScroll.classList.add("hide-button-scroll")
-    }
+  if (document.body.scrollTop > 750 ||
+    document.documentElement.scrollTop > 750) {
+    buttonScroll.classList.remove("hide-button-scroll")
+  } else {
+    buttonScroll.classList.add("hide-button-scroll")
+  }
 }
 
+const sites = ['color-flipper', 'to-do-list', 'search-engine', 'password-generator', 'weather-app', 'message-notify', 'paragraph-generator']
+const base = "https://vanilla-javascript.herokuapp.com/";
+const tableBody = document.getElementById('table-body')
 
 
+let template = ''
+let count = 1
+function generateTemplate() {
 
+  sites.forEach(site => {
+    let no = count < 10 ? '0' + count : count;
+    template += `
+    <tr>
+      <th scope="row">${no}</th>
+        <td style="text-transform:capitalize">${site}</td>
+        <td><a href="${base}${site}" target="_blank">Live demo</a></td>
+      </tr>
+    `
+    count++;
+  })
+  tableBody.innerHTML = template
+}
 
+generateTemplate()
 
 
 
