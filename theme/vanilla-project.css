@@ -1,0 +1,35 @@
+
+:root{
+    --transition: all 0.3s linear;
+    --spacing: 0.15rem;
+    --clr-grey-1: hsl(209, 61%, 16%);
+
+
+    --bg-blue-1:#5e83e8;
+    --bg-black-1: #020c1b;
+    --bg-black-2: rgb(35, 35, 35);
+    --box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+
+    --text-lblue:#ccd6f6;
+    --text-grey: #495670;
+    --text-white: #f8f8f8;
+}
+
+.vanilla-projects-container{
+    width: 100%;
+    height: auto;
+    background-color: var(--text-white);
+}
+
+.inner-vanilla-projects{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: inherit;
+    padding-bottom: 50px;
+}
+
+.section-title2{
+    color: var(--bg-black-1);
+    margin-bottom: 2rem;
+}
